@@ -17,9 +17,12 @@ namespace CheckPallindrome
 
             var inputArray = input.ToCharArray();
             var length = inputArray.Length;
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < length/2; i++)
             {
-                return inputArray[i] == inputArray[length - i - 1];
+                if (inputArray[i] != inputArray[length - i - 1])
+                {
+                    return false;
+                }
             }
 
             return true;
